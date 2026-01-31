@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+openai
+requests
+faiss-cpu
+sentence-transformers
+torch
+transformers

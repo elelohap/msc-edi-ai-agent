@@ -7,14 +7,15 @@ router = APIRouter()
 
 @router.post("/ask")
 async def ask(request: Request):
-    data = await request.json()
-    question = data.get("question", "").strip()
+    try:
+        data = await request.json()
+        question = data.get("question", "").strip()
+        if not question:
+            return JSONResponse({"error": "No question provided"}, status_code=400)
 
-    if not question:
-        return JSONResponse({"error": "No question provided"}, status_code=400)
+        context_chunks = retrieve_context(question, top_k=5)
+        answer = ask_llm(question, context_chunks)
+        return JSONResponse({"answer": answer})
 
-    context_chunks = retrieve_context(question, top_k=5)
-
-    answer = ask_llm(question, context_chunks)
-
-    return JSONResponse({"answer": answer})
+    except Exception:
+        return JSONResponse({"error": "Internal error"}, status_code=500)
