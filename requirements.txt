@@ -1,8 +1,9 @@
 fastapi
 uvicorn[standard]
 openai
-requests
+# requests
 faiss-cpu
-sentence-transformers
-torch
-transformers
+#sentence-transformers - idea is to reduce the memory consumption
+# torch
+# transformers
+numpy
