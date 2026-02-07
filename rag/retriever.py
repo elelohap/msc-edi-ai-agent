@@ -13,8 +13,9 @@ from openai import OpenAI
 MIN_SCORE = float(os.getenv("MIN_SIMILARITY", "0.2"))
 
 _BASE = Path(__file__).resolve().parent
-DOCS_PATH = Path(os.getenv("DOCS_PATH", str(_BASE / "docs.pkl")))
-FAISS_PATH = Path(os.getenv("FAISS_PATH", str(_BASE / "faiss.index")))
+ROOT = _BASE.parent
+DOCS_PATH = Path(os.getenv("DOCS_PATH", str(ROOT / "docs.pkl")))
+FAISS_PATH = Path(os.getenv("FAISS_PATH", str(ROOT / "faiss.index")))
 
 EMBED_MODEL = os.getenv("EMBED_MODEL", "text-embedding-3-small")  # 1536 dims by default :contentReference[oaicite:1]{index=1}
 
