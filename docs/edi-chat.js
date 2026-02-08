@@ -34,6 +34,7 @@
     font-size:20px;background:#111;color:#fff
   }
 
+  
   /* Panel becomes a flex column so everything stacks under the title */
   #edi-chat-panel{
     position:fixed;
@@ -62,7 +63,7 @@
     padding:12px;border-bottom:1px solid #eee;
     display:flex;align-items:center;justify-content:space-between
   }
-  #edi-chat-title{font-weight:600;font-size:14px}
+  #edi-chat-title{font-weight:700;font-size:16px;letter-spacing:0.2px;text-transform:none;}
   #edi-chat-close{border:0;background:transparent;font-size:20px;cursor:pointer;line-height:1}
 
   /* Suggestions are stacked right under title, and can scroll if many */
