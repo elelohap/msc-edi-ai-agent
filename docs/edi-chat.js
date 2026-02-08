@@ -36,16 +36,25 @@
 
   /* Panel becomes a flex column so everything stacks under the title */
   #edi-chat-panel{
-    position:fixed;right:18px;bottom:86px;
-    width:360px;max-width:calc(100vw - 36px);
-    height:520px;max-height:70vh;
+    position:fixed;
+    left:12px;
+    right:12px;
+    bottom:86px;
+
+    width:auto;                 /* override old fixed width */
+    max-width:none;
+
+    height:70vh;                /* or 520px if you prefer */
+    max-height:80vh;
+
     background:#fff;border-radius:14px;
     box-shadow:0 18px 45px rgba(0,0,0,.25);
     display:none;overflow:hidden;
 
     display:flex;
     flex-direction:column;
-  }
+}
+
 
   /* Header */
   #edi-chat-header{
