@@ -73,11 +73,11 @@
 
   /* Header */
   #edi-chat-header{
-    flex:0 0 auto;
-    padding:12px;border-bottom:1px solid #eee;
+    flex:0 0 auto;background:#fff;
+    padding:12px;border-bottom:2px solid var(--edi-accent);
     display:flex;align-items:center;justify-content:space-between; background:var(--edi-soft);
   }
-  #edi-chat-title{font-weight:700;font-size:16px;letter-spacing:0.2px;text-transform:none;}
+  #edi-chat-title{font-weight:700;font-size:18px;color:#111;letter-spacing:0.2px;text-transform:none;}
   #edi-chat-close{border:0;background:transparent;font-size:20px;cursor:pointer;line-height:1}
 
   /* Suggestions are stacked right under title, and can scroll if many */
